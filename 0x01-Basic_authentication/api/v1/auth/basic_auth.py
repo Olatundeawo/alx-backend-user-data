@@ -6,12 +6,12 @@ import re
 import base64
 import binascii
 from typing import Tuple, TypeVar
-
-
-auth = __import__('auth').Auth
+from .auth import Auth
 from models.user import User
 
-class BasicAuth(auth):
+
+
+class BasicAuth(Auth):
     """class Module"""
     def extract_based64_authorization_header(self, authorization_header: str) -> str:
         """
